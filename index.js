@@ -1,13 +1,22 @@
+// (x, y) is the direction vector of the snake, initially both as zero as snake is not moving
 let inputDir = { x: 0, y: 0 };
+
+// Audio files are audio objects, they are constant
 const foodSound = new Audio("music/food.mp3");
 const gameOverSound = new Audio("music/gameover.mp3");
 const moveSound = new Audio("music/move.mp3");
 const musicSound = new Audio("music/music.mp3");
+
+// Let initial speed be 10
 let speed = 10;
+// Let initial score be 0
 let score = 0;
+// Last time the screen was printed was at 0 time
 let lastPaintTime = 0;
+// Snake array is initially an array with one element (x, y)
 let snakeArr = [{ x: 13, y: 15 }];
 
+// Initially food is at (6, 7)
 food = { x: 6, y: 7 };
 
 function main(ctime) {
@@ -124,7 +133,7 @@ window.addEventListener("keydown", (e) => {
     e.key == "ArrowLeft"
   ) {
     musicSound.play();
-    inputDir = { x: 0, y: 1 };
+    // inputDir = { x: 0, y: 1 };
     moveSound.play();
     switch (e.key) {
       case "ArrowUp":

@@ -1,28 +1,56 @@
+/* Text fonts */
 @import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
 
+/* Universal Reset */
 * {
   padding: 0;
   margin: 0;
 }
 
+/* The div we created awhile ago */
 .body {
   background-color: black;
+  /* For responsive design, we maintain vh/vw as our units */
+  /* vh - view height */
   min-height: 100vh;
+  /* vw - view width */
   background-size: 100vw 100vh;
+  /* The background-repeat property sets if/how a background image will be repeated.
+  no-repeat	The background-image is not repeated. The image will only be shown once */
   background-repeat: no-repeat;
+  /* Turn the body into a flex container which contains two items, title and board, other components will modified */
   display: flex;
+  /* Space around the ends */
   justify-content: space-around;
+  /* Center align them */
   align-items: center;
+  /* Absolute components are relative to body */
+  position: relative;
 }
 
+/* The title of the game */
 h1 {
   font-family: "Mr Dafoe", serif;
-  font-size: 6em;
+  /* The em unit allows setting the font size of an element relative to the font size of its parent. */
+  font-size: 7em;
   color: white;
-
+  /* The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements. */
   transform: rotate(-7deg);
+  /* Hides mouse cursor */
   caret-color: transparent;
+  /* The animation property is a shorthand property for:
+
+  animation-name                  Specifies the name of the keyframe you want to bind to the selector
+  animation-duration              Specifies how many seconds or milliseconds an animation takes to complete
+  animation-timing-function       Specifies the speed curve of the animation
+  animation-delay                 Specifies a delay before the animation will start
+  animation-iteration-count       Specifies how many times an animation should be played
+  animation-direction             Specifies whether or not the animation should play in reverse on alternate cycles
+  animation-fill-mode             Specifies what values are applied by the animation outside the time it is executing
+  animation-play-state          	Specifies whether the animation is running or paused
+  
+  */
   animation: headingglow 500ms infinite alternate;
 }
 
